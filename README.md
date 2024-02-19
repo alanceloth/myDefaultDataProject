@@ -20,7 +20,15 @@ Open a terminal window (cmd, bash, or anything with git commands) and type:
 ```bash
 git clone https://github.com/alanceloth/myDefaultDataProject.git
 cd myDefaultDataProject
+git init
 ```
+
+## Create new GitHub Repo from existing one
+In the terminal window, type:
+```bash
+gh repo create
+```
+Follow the instructions on screen, add a remote called 'master', and that's it!
 
 ## Setting up the environment
 We will need python 3.11.5, and to get this version we will use pyenv.
