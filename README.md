@@ -79,6 +79,12 @@ In the terminal:
 ```bash
 duckdb
 ```
+If the above code don't work properly, go to the [duckdb download page](https://duckdb.org/docs/installation/index?version=latest&environment=cli&installer=binary&platform=win) and get the latest zip file. Extract the duckdb.exe and put inside your project folder. This will allow you to use the duckdb in the terminal.
+Another option is to do the winget installation step recomended in the documentation (for windows, for other OS check the documentation).
+
+```bash
+winget install DuckDB.cli
+```
 
 # Folder Structure
 
