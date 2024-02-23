@@ -13,6 +13,16 @@ To use this project properly, you will need to install:
 To install and configure Pyenv and Poetry in Windows, check [this video](https://www.youtube.com/watch?v=547Jr26duHQ&pp=ygUgaG93IHRvIGluc3RhbGwgcG9ldHJ5IGluIHdpbmRvd3M%3D).
 To learn how to manage multiple python versions using pyenv, check [this article](https://realpython.com/intro-to-pyenv/).
 
+# Poetry local environment config
+
+To create the .venv local folder, type in terminal:
+*for this project only, add the argument --local at the end of the command. Below is the poetry global settings.
+```bash
+poetry config virtualenvs.create true
+poetry config virtualenvs.in-project true
+```
+
+
 # Installation Steps
 
 ## Git Clone
@@ -73,12 +83,14 @@ poetry shell
 poetry install --no-root
 ```
 
+
 ## Testing
 
 In the terminal:
 ```bash
 duckdb
 ```
+
 If the above code don't work properly, go to the [duckdb download page](https://duckdb.org/docs/installation/index?version=latest&environment=cli&installer=binary&platform=win) and get the latest zip file. Extract the duckdb.exe and put inside your project folder. This will allow you to use the duckdb in the terminal.
 Another option is to do the winget installation step recomended in the documentation (for windows, for other OS check the documentation).
 
