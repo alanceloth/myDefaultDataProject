@@ -50,18 +50,18 @@ Choose the current path (just put a dot "." and hit enter)
 Follow the instructions on screen, add a remote called 'master', and that's it!
 
 ## Setting up the environment
-We will need python 3.11.5, and to get this version we will use pyenv.
+We will need python 3.12.2, and to get this version we will use pyenv.
 In the same terminal window, type:
 
-If you never used pyenv, or if you don't have the 3.11.5 version in your pyenv:
+If you never used pyenv, or if you don't have the 3.12.2 version in your pyenv:
 ```bash
 pyenv update
 pyenv install --l
 ```
 
-If you find the 3.11.5, then it's everything correct.
+If you find the 3.12.2, then it's everything correct.
 ```bash
-pyenv install 3.11.5
+pyenv install 3.12.2
 ```
 
 To check the python versions installed, use this:
@@ -75,17 +75,17 @@ You can also check the default python version used by the system with this:
 which python
 ```
 
-If you have the 3.11.5 version in your pyenv:
-To use the project python version (3.11.5), use the command below:
+If you have the 3.12.2 version in your pyenv:
+To use the project python version (3.12.2), use the command below:
 ```bash
-pyenv local 3.11.5
+pyenv local 3.12.2
 ```
 
 ## Poetry
 
 To initialize the poetry in the project, type in the terminal:
 ```bash
-poetry env use 3.11.5
+poetry env use 3.12.2
 poetry shell
 poetry install --no-root
 ```
