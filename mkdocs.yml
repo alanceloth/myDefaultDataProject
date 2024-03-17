@@ -2,6 +2,9 @@ site_name: Default Project Documentation
 
 theme:
   name: "material"
+  palette:
+    scheme: slate
+    primary: white
 
 plugins:
   - mkdocstrings

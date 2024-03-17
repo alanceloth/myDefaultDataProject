@@ -1,0 +1,15 @@
+name: Update MKDocs
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Update mkdocs
+        run: |
+          pip install mkdocs
+          mkdocs gh-deploy --force
