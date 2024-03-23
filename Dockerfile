@@ -5,7 +5,7 @@ FROM python:3.12.2-slim
 WORKDIR /app
 
 # Install Poetry
-RUN curl -sSL https://raw.githubusercontent.com/python-poetry/poetry/master/get-poetry.py | python -
+RUN curl -sSL https://install.python-poetry.org | python -
 
 # Allow installing as root
 ENV POETRY_VIRTUALENVS_CREATE=false
@@ -15,7 +15,7 @@ COPY poetry.lock pyproject.toml ./
 COPY .python-version ./
 
 # Install dependencies
-RUN /root/.poetry/bin/poetry install --no-dev
+RUN poetry install --no-dev
 
 # Copy all files from the current directory into the container at /app
 COPY . .
@@ -24,7 +24,7 @@ COPY . .
 #EXPOSE 8501
 
 # Command to run the Streamlit app when the container starts
-#CMD ["/root/.poetry/bin/poetry", "run", "streamlit", "run", "frontend.py"]
+#CMD ["poetry", "run", "streamlit", "run", "frontend.py"]
 
 # Command to run the app
-CMD ["/root/.poetry/bin/poetry", "run", "python", "main.py"]
+CMD ["poetry", "run", "python", "main.py"]
